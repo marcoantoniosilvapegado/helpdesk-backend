@@ -11,10 +11,10 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.br.CPF;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.marco.helpdesk.domain.Tecnico;
+import com.marco.helpdesk.domain.Cliente;
 import com.marco.helpdesk.domain.enums.Perfil;
 
-public class TecnicoDTO implements Serializable{	
+public class ClienteDTO implements Serializable{	
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -32,11 +32,11 @@ public class TecnicoDTO implements Serializable{
 	@JsonFormat(pattern = "dd/MM/yyyy")
 	protected LocalDate dataCriacao = LocalDate.now();
 	
-	public TecnicoDTO() {		
+	public ClienteDTO() {		
 		super();
 		addPerfil(Perfil.CLIENTE);
 	}
-	public TecnicoDTO(Tecnico obj) {
+	public ClienteDTO(Cliente obj) {
 		super();
 		this.id = obj.getId();
 		this.nome = obj.getNome();
