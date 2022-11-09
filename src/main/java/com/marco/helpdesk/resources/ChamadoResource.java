@@ -8,6 +8,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -21,6 +22,7 @@ import com.marco.helpdesk.domain.Chamado;
 import com.marco.helpdesk.domain.dtos.ChamadoDTO;
 import com.marco.helpdesk.services.ChamadoService;
 
+@CrossOrigin
 @RestController
 @RequestMapping(value = "/chamados")
 public class ChamadoResource {
